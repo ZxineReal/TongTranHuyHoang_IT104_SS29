@@ -1,0 +1,44 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "product_name": "Laptop Dell XPS 13",
+      "image": "https://ttcenter.com.vn/uploads/product/sfbnniel-2114-dell-xps-13-9315-core-i7-1250u-ram-16gb-ssd-512gb-4k.jpg",
+      "price": 35000000,
+      "quantity": 5,
+      "created_at": "2025-09-15"
+    },
+    {
+      "id": 2,
+      "product_name": "iPhone 15 Pro",
+      "image": "https://cdn2.fptshop.com.vn/unsafe/828x0/filters:format(webp):quality(75)/2023_9_13_638301983422003341_VN_iPhone_15_Pro_Natural_Titanium_PDP_Image_Position-1A_Natural_Titanium_Color.jpg",
+      "price": 29000000,
+      "quantity": 10,
+      "created_at": "2025-09-14"
+    },
+    {
+      "id": 3,
+      "product_name": "Samsung Galaxy S24 Ultra",
+      "image": "https://mobileworld.com.vn/uploads/product/S24_Series/thumbs/s24u_den.webp",
+      "price": 25000000,
+      "quantity": 8,
+      "created_at": "2025-09-10"
+    },
+    {
+      "id": 4,
+      "product_name": "Sony WH-1000XM5",
+      "image": "https://tainghe.com.vn/media/product/4603_tai_nghe_sony_wh_1000xm5_chinh_hang_3.jpg",
+      "price": 8000000,
+      "quantity": 15,
+      "created_at": "2025-09-09T16:45:00Z"
+    },
+    {
+      "id": 5,
+      "product_name": "Apple Watch Series 9",
+      "image": "https://cdn1.viettelstore.vn/images/Product/ProductImage/medium/AW-S9-GPS-SportBand-Mid1.jpg",
+      "price": 12000000,
+      "quantity": 12,
+      "created_at": "2025-09-08"
+    }
+  ]
+}
