@@ -12,7 +12,7 @@ interface Student {
 
 export default function StudentList() {
   const [students, setStudents] = useState<Student[]>([]);
-  const [searchId, setSearchId] = useState<string>(""); // tìm kiếm
+  const [searchId, setSearchId] = useState<string>("");
   const [showAddModal, setShowAddModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deleteId, setDeleteId] = useState<number | null>(null);
@@ -28,7 +28,6 @@ export default function StudentList() {
   const getAllStudent = async () => {
     try {
       const res = await fetch("http://localhost:8080/student");
-      if (!res.ok) throw new Error("Error fetching students");
       const data = await res.json();
       setStudents(Array.isArray(data) ? data : []);
     } catch (error) {
@@ -48,12 +47,10 @@ export default function StudentList() {
     }
     try {
       const res = await fetch(`http://localhost:8080/student/${searchId}`);
-      if (!res.ok) throw new Error("Not found");
       const data = await res.json();
-      // json-server trả object, mình chuyển thành array để map
       setStudents([data]);
     } catch (error) {
-      alert("Không tìm thấy sinh viên");
+      console.log(error);
       setStudents([]);
     }
   };
@@ -81,7 +78,6 @@ export default function StudentList() {
       getAllStudent();
     } catch (err) {
       console.log(err);
-      alert("Lỗi thêm sinh viên");
     }
   };
 
@@ -97,7 +93,6 @@ export default function StudentList() {
       getAllStudent();
     } catch (err) {
       console.log(err);
-      alert("Lỗi xóa sinh viên");
     }
   };
 
@@ -169,7 +164,6 @@ export default function StudentList() {
         </div>
       </div>
 
-      {/* Modal thêm mới sinh viên */}
       {showAddModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white rounded p-6 w-96">
@@ -235,7 +229,6 @@ export default function StudentList() {
         </div>
       )}
 
-      {/* Modal xóa sinh viên */}
       {showDeleteModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white rounded p-6 w-96">
